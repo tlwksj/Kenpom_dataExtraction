@@ -27,7 +27,7 @@ data <- data.frame(
 
 ## Data to post to csv
 
-csv_file <- paste0("kenpom_basketball_data.csv")
+csv_file <- paste0("data/kenpom_basketball_data.csv")
 total_away <- data |> group_by(Date) |> summarize(total_away = sum(Away, na.rm= TRUE))
 total_home <- data |> group_by(Date) |> summarize(total_home = sum(Home, na.rm= TRUE))
 
@@ -41,5 +41,6 @@ output <- data.frame(
 )
 
 write.csv(output, csv_file, row.names = FALSE)
+
 
 
