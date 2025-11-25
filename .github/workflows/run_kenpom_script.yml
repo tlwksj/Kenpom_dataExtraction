@@ -27,6 +27,7 @@ jobs:
             any::readr
             any::dplyr
             any::stringr
+            any::tidyr
 
       - name: Run data script
         run: Rscript kenpom_data_script.R
