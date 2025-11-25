@@ -39,8 +39,11 @@ output <- data.frame(
   total_home =  total_home$total_home,
   total_points_average = total_points_average$avrpoints
 )
-
+if (!dir.exists("data")) {
+  dir.create("data")
+}
 write.csv(output, csv_file, row.names = FALSE)
+
 
 
 
