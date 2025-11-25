@@ -31,6 +31,9 @@ jobs:
 
       - name: Run data script
         run: Rscript kenpom_data_script.R
+      
+      - name: Create data folder
+        run: mkdir -p data
 
       - name: Commit updated CSV
         run: | 
